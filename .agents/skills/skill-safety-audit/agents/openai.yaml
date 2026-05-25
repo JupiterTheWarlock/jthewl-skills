@@ -1,0 +1,3 @@
+display_name: Skill Safety Audit
+short_description: Checks skills for secrets, private paths, and personal leakage before publishing.
+default_prompt: Audit this skill folder for public-release safety and report blockers first.

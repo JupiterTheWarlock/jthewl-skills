@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "xhs-note-scraper",
+  "description": "Export public Xiaohongshu/XHS note pages to Markdown, JSON, raw HTML, and downloaded images using public HTTP fetches.",
+  "version": "0.1.0",
+  "author": {
+    "name": "JupiterTheWarlock"
+  },
+  "homepage": "https://github.com/JupiterTheWarlock/jthewl-skills",
+  "repository": "https://github.com/JupiterTheWarlock/jthewl-skills",
+  "license": "MIT",
+  "keywords": ["xhs", "xiaohongshu", "scraper", "archive", "markdown", "skill"]
+}

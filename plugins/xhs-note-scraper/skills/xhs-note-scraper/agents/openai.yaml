@@ -1,0 +1,4 @@
+interface:
+  display_name: "XHS Note Scraper"
+  short_description: "Export public XHS notes safely"
+  default_prompt: "Export this public Xiaohongshu note URL to Markdown, JSON, and downloaded images without browser automation."

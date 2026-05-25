@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-marketplace.json",
+  "name": "jthewl-skills",
+  "description": "JupiterTheWarlock's public Claude Code skill plugins.",
+  "version": "0.1.0",
+  "owner": {
+    "name": "JupiterTheWarlock"
+  },
+  "plugins": [
+    {
+      "name": "git-sync",
+      "source": "./plugins/git-sync",
+      "description": "Generic multi-repository Git synchronization workflow for main repos, submodules, and nested Git repos.",
+      "version": "0.1.0",
+      "author": {
+        "name": "JupiterTheWarlock"
+      },
+      "homepage": "https://github.com/JupiterTheWarlock/jthewl-skills",
+      "repository": "https://github.com/JupiterTheWarlock/jthewl-skills",
+      "license": "MIT",
+      "category": "Development",
+      "tags": ["git", "sync", "submodules", "repository", "workflow", "skill"]
+    },
+    {
+      "name": "project-skill-governance",
+      "source": "./plugins/project-skill-governance",
+      "description": "Consolidate repo-local agent skills into .agents/skills and maintain compatibility router skills across agent ecosystems.",
+      "version": "0.1.0",
+      "author": {
+        "name": "JupiterTheWarlock"
+      },
+      "homepage": "https://github.com/JupiterTheWarlock/jthewl-skills",
+      "repository": "https://github.com/JupiterTheWarlock/jthewl-skills",
+      "license": "MIT",
+      "category": "Development",
+      "tags": ["skills", "agents", "governance", "migration", "codex", "claude-code"]
+    },
+    {
+      "name": "xhs-note-scraper",
+      "source": "./plugins/xhs-note-scraper",
+      "description": "Export public Xiaohongshu/XHS note pages to Markdown, JSON, raw HTML, and downloaded images using public HTTP fetches.",
+      "version": "0.1.0",
+      "author": {
+        "name": "JupiterTheWarlock"
+      },
+      "homepage": "https://github.com/JupiterTheWarlock/jthewl-skills",
+      "repository": "https://github.com/JupiterTheWarlock/jthewl-skills",
+      "license": "MIT",
+      "category": "Content",
+      "tags": ["xhs", "xiaohongshu", "scraper", "archive", "markdown", "skill"]
+    }
+  ]
+}

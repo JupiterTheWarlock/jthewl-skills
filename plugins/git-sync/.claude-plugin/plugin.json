@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "git-sync",
+  "description": "Generic multi-repository Git synchronization workflow for main repos, submodules, and nested Git repos.",
+  "version": "0.1.0",
+  "author": {
+    "name": "JupiterTheWarlock"
+  },
+  "homepage": "https://github.com/JupiterTheWarlock/jthewl-skills",
+  "repository": "https://github.com/JupiterTheWarlock/jthewl-skills",
+  "license": "MIT",
+  "keywords": ["git", "sync", "submodules", "repository", "workflow", "skill"]
+}
