@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/JupiterTheWarlock/jthewl-skills/.jthewl-hub/plugin.schema.json",
+  "title": "jthewl-skills hub plugin metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "hubDesc",
+    "shortLabel",
+    "status",
+    "updatedAt",
+    "maintainer",
+    "originalAuthor",
+    "provenance",
+    "links",
+    "useCases",
+    "warnings"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "hubDesc": {
+      "type": "string",
+      "minLength": 1
+    },
+    "shortLabel": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "status": {
+      "type": "string",
+      "enum": ["stable", "beta", "experimental", "deprecated"]
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date"
+    },
+    "maintainer": {
+      "$ref": "#/$defs/person"
+    },
+    "originalAuthor": {
+      "$ref": "#/$defs/person"
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "sourceName", "sourceUrl", "license", "notes"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["original", "adapted", "mirrored", "curated"]
+        },
+        "sourceName": {
+          "type": "string"
+        },
+        "sourceUrl": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label", "url"],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "useCases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "screenshots": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    }
+  },
+  "$defs": {
+    "person": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

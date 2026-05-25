@@ -38,6 +38,15 @@ jthewl-skills/
 
 One marketplace can list many plugins. Each plugin can contain one or more skills. This repository starts with one skill per plugin so each skill can be installed and updated independently.
 
+## Hub Metadata
+
+The public web hub reads extra display metadata from `.jthewl-hub/plugins/<plugin-name>.json`.
+This data is intentionally separate from Claude Code plugin manifests:
+
+- `.claude-plugin/marketplace.json` and `plugins/*/.claude-plugin/plugin.json` stay focused on Claude Code installation and validation.
+- `.jthewl-hub/plugins/*.json` stores human-facing descriptions, provenance, maintainer/original author fields, links, use cases, warnings, and update dates for the web hub.
+- Third-party, adapted, mirrored, or curated plugins must declare their origin in `provenance`.
+
 ## Included Plugins
 
 | Plugin | Skill | Purpose |

@@ -1,0 +1,38 @@
+{
+  "$schema": "../plugin.schema.json",
+  "name": "git-sync",
+  "hubDesc": "面向 meta-repo 的多仓库同步治理工具。它会把主仓库、git submodules、根目录独立 Git 仓库分层处理，适合一个 workspace 里混合管理多个项目的场景。",
+  "shortLabel": "Multi-repo sync",
+  "status": "stable",
+  "updatedAt": "2026-05-25",
+  "maintainer": {
+    "name": "JupiterTheWarlock",
+    "url": "https://github.com/JupiterTheWarlock"
+  },
+  "originalAuthor": {
+    "name": "JupiterTheWarlock",
+    "url": "https://github.com/JupiterTheWarlock"
+  },
+  "provenance": {
+    "type": "original",
+    "sourceName": "",
+    "sourceUrl": "",
+    "license": "MIT",
+    "notes": ""
+  },
+  "links": [
+    {
+      "label": "Repository",
+      "url": "https://github.com/JupiterTheWarlock/jthewl-skills"
+    }
+  ],
+  "useCases": [
+    "同步主仓库、submodules 和根目录独立 Git 仓库",
+    "为每个仓库保留独立 commit message",
+    "避免在 meta-repo 根目录误用无差别 git add"
+  ],
+  "warnings": [
+    "执行 live sync 前应确认当前工作区没有不想提交或推送的本地改动"
+  ],
+  "screenshots": []
+}

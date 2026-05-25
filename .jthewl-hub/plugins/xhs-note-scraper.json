@@ -1,0 +1,38 @@
+{
+  "$schema": "../plugin.schema.json",
+  "name": "xhs-note-scraper",
+  "hubDesc": "用于把公开小红书笔记导出为 Markdown、JSON、原始 HTML 和图片素材的归档工具。设计重点是只使用公开 HTTP 内容，不依赖登录态或本地浏览器。",
+  "shortLabel": "XHS note export",
+  "status": "stable",
+  "updatedAt": "2026-05-25",
+  "maintainer": {
+    "name": "JupiterTheWarlock",
+    "url": "https://github.com/JupiterTheWarlock"
+  },
+  "originalAuthor": {
+    "name": "JupiterTheWarlock",
+    "url": "https://github.com/JupiterTheWarlock"
+  },
+  "provenance": {
+    "type": "original",
+    "sourceName": "",
+    "sourceUrl": "",
+    "license": "MIT",
+    "notes": ""
+  },
+  "links": [
+    {
+      "label": "Repository",
+      "url": "https://github.com/JupiterTheWarlock/jthewl-skills"
+    }
+  ],
+  "useCases": [
+    "归档公开小红书笔记",
+    "导出 Markdown 和结构化 JSON",
+    "下载公开页面暴露的图片素材"
+  ],
+  "warnings": [
+    "只处理公开 HTTP 页面暴露的数据；如果页面不暴露 SSR 数据或图片 URL，应报告限制并停止"
+  ],
+  "screenshots": []
+}

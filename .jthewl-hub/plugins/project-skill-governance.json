@@ -1,0 +1,38 @@
+{
+  "$schema": "../plugin.schema.json",
+  "name": "project-skill-governance",
+  "hubDesc": "用于治理项目内多套 agent skill 目录的迁移工具。它把 .agents/skills 作为 canonical source，同时把 .claude、.cursor、.codex 等目录改造成兼容入口。",
+  "shortLabel": "Skill governance",
+  "status": "stable",
+  "updatedAt": "2026-05-25",
+  "maintainer": {
+    "name": "JupiterTheWarlock",
+    "url": "https://github.com/JupiterTheWarlock"
+  },
+  "originalAuthor": {
+    "name": "JupiterTheWarlock",
+    "url": "https://github.com/JupiterTheWarlock"
+  },
+  "provenance": {
+    "type": "original",
+    "sourceName": "",
+    "sourceUrl": "",
+    "license": "MIT",
+    "notes": ""
+  },
+  "links": [
+    {
+      "label": "Repository",
+      "url": "https://github.com/JupiterTheWarlock/jthewl-skills"
+    }
+  ],
+  "useCases": [
+    "合并项目内重复或分散的 agent skills",
+    "维护 .agents/skills canonical source",
+    "为不同 agent 生态生成兼容 router skill"
+  ],
+  "warnings": [
+    "运行前应检查项目里是否存在同名但内容不同的 skill，冲突需要人工判断"
+  ],
+  "screenshots": []
+}
