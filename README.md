@@ -2,6 +2,13 @@
 
 JupiterTheWarlock's public Claude Code skill marketplace.
 
+Browse the marketplace on the public hub: [skills.jthewl.cc](https://skills.jthewl.cc)
+
+Related repositories:
+
+- [jthewl-skills](https://github.com/JupiterTheWarlock/jthewl-skills) — this Claude Code skills marketplace.
+- [jthewl-skills-hub](https://github.com/JupiterTheWarlock/jthewl-skills-hub) — the public web UI for browsing and previewing plugins.
+
 ## Marketplace
 
 Add the marketplace in Claude Code:
