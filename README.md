@@ -79,3 +79,15 @@ Use local-only private terms for personal codenames, handles, or domains:
 ```bash
 SKILL_SAFETY_PRIVATE_TERMS="private-term-1,private-term-2" node .agents/skills/skill-safety-audit/scripts/audit-skill-safety.mjs "<skill-dir>"
 ```
+
+## Auto Refresh Hub
+
+Push to `main` in this repository now triggers `.github/workflows/trigger-skills-hub-deploy.yml`, which calls a Vercel Deploy Hook for `jthewl-skills-hub`.
+
+Required setup (once):
+
+1. In Vercel `jthewl-skills-hub` project settings, create a Deploy Hook for `main`.
+2. In this repository settings, add GitHub Actions secret `SKILLS_HUB_DEPLOY_HOOK`.
+3. Set the secret value to that Deploy Hook URL.
+
+After setup, changes to `.claude-plugin/**`, `.jthewl-hub/**`, or `plugins/**` will auto-trigger hub redeploy after each push.

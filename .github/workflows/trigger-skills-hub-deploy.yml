@@ -1,0 +1,19 @@
+name: Trigger Skills Hub Deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.claude-plugin/**'
+      - '.jthewl-hub/**'
+      - 'plugins/**'
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel deploy hook
+        run: curl -X POST "$SKILLS_HUB_DEPLOY_HOOK"
+        env:
+          SKILLS_HUB_DEPLOY_HOOK: ${{ secrets.SKILLS_HUB_DEPLOY_HOOK }}
