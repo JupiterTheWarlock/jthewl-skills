@@ -1,0 +1,39 @@
+{
+  "$schema": "../plugin.schema.json",
+  "name": "r2-manage-skill",
+  "hubDesc": "Cloudflare R2 图床文件管理工具。支持上传、列出、查看元信息、重命名和移动文件，也包含一个 Gallery 前端生成器。需要配置 R2 API 凭据。",
+  "shortLabel": "R2 file manager",
+  "status": "stable",
+  "updatedAt": "2026-06-03",
+  "maintainer": {
+    "name": "JupiterTheWarlock",
+    "url": "https://github.com/JupiterTheWarlock"
+  },
+  "originalAuthor": {
+    "name": "JupiterTheWarlock",
+    "url": "https://github.com/JupiterTheWarlock"
+  },
+  "provenance": {
+    "type": "original",
+    "sourceName": "",
+    "sourceUrl": "",
+    "license": "MIT",
+    "notes": ""
+  },
+  "links": [
+    {
+      "label": "Repository",
+      "url": "https://github.com/JupiterTheWarlock/jthewl-skills"
+    }
+  ],
+  "useCases": [
+    "上传图片到 Cloudflare R2 图床",
+    "列出和查看 R2 文件元信息",
+    "重命名、移动 R2 文件",
+    "生成图床 Gallery 前端页面"
+  ],
+  "warnings": [
+    "需要配置 Cloudflare R2 API 凭据（Account ID、Access Key ID、Secret Access Key）"
+  ],
+  "screenshots": []
+}

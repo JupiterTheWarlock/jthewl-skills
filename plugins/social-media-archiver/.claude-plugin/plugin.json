@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "social-media-archiver",
+  "description": "Collect public X/Twitter threads and Xiaohongshu posts, then generate structured blog essays from archived content.",
+  "version": "0.1.0",
+  "author": {
+    "name": "JupiterTheWarlock",
+    "url": "https://github.com/JupiterTheWarlock"
+  },
+  "homepage": "https://github.com/JupiterTheWarlock/jthewl-skills",
+  "repository": "https://github.com/JupiterTheWarlock/jthewl-skills",
+  "license": "MIT",
+  "keywords": [
+    "twitter",
+    "x",
+    "xiaohongshu",
+    "archive",
+    "blog",
+    "essay",
+    "social-media",
+    "skill"
+  ]
+}

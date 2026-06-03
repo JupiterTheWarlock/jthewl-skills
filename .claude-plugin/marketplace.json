@@ -50,6 +50,50 @@
       ]
     },
     {
+      "name": "r2-manage-skill",
+      "source": "./plugins/r2-manage-skill",
+      "description": "Manage Cloudflare R2 storage files: upload, list, inspect metadata, rename/move. Requires R2 API credentials.",
+      "version": "0.1.0",
+      "author": {
+        "name": "JupiterTheWarlock"
+      },
+      "homepage": "https://github.com/JupiterTheWarlock/jthewl-skills",
+      "repository": "https://github.com/JupiterTheWarlock/jthewl-skills",
+      "license": "MIT",
+      "category": "Content",
+      "tags": [
+        "r2",
+        "cloudflare",
+        "image-hosting",
+        "upload",
+        "storage",
+        "skill"
+      ]
+    },
+    {
+      "name": "social-media-archiver",
+      "source": "./plugins/social-media-archiver",
+      "description": "Collect public X/Twitter threads and Xiaohongshu posts, then generate structured blog essays from archived content.",
+      "version": "0.1.0",
+      "author": {
+        "name": "JupiterTheWarlock"
+      },
+      "homepage": "https://github.com/JupiterTheWarlock/jthewl-skills",
+      "repository": "https://github.com/JupiterTheWarlock/jthewl-skills",
+      "license": "MIT",
+      "category": "Content",
+      "tags": [
+        "twitter",
+        "x",
+        "xiaohongshu",
+        "archive",
+        "blog",
+        "essay",
+        "social-media",
+        "skill"
+      ]
+    },
+    {
       "name": "xhs-note-scraper",
       "source": "./plugins/xhs-note-scraper",
       "description": "Export public Xiaohongshu/XHS note pages to Markdown, JSON, raw HTML, and downloaded images using public HTTP fetches.",
@@ -72,4 +116,3 @@
     }
   ]
 }
-

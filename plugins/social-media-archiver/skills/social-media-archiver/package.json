@@ -1,0 +1,13 @@
+{
+  "name": "social-media-archiver",
+  "version": "1.0.0",
+  "description": "Social media content archiver - collects X/Twitter and XHS posts into blog essays",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "thread": "node scripts/thread_x.js",
+    "generate": "node scripts/generate_essay.js"
+  }
+}

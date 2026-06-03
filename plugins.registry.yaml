@@ -83,3 +83,38 @@ plugins:
         - "下载公开页面暴露的图片素材"
       warnings:
         - "只处理公开 HTTP 页面暴露的数据；如果页面不暴露 SSR 数据或图片 URL，应报告限制并停止"
+
+  r2-manage-skill:
+    skills: [r2-manage-skill]
+    version: "0.1.0"
+    description: "Manage Cloudflare R2 storage files: upload, list, inspect metadata, rename/move. Requires R2 API credentials."
+    category: Content
+    tags: [r2, cloudflare, image-hosting, upload, storage, skill]
+    hub:
+      hubDesc: "Cloudflare R2 图床文件管理工具。支持上传、列出、查看元信息、重命名和移动文件，也包含一个 Gallery 前端生成器。需要配置 R2 API 凭据。"
+      shortLabel: "R2 file manager"
+      status: stable
+      useCases:
+        - "上传图片到 Cloudflare R2 图床"
+        - "列出和查看 R2 文件元信息"
+        - "重命名、移动 R2 文件"
+        - "生成图床 Gallery 前端页面"
+      warnings:
+        - "需要配置 Cloudflare R2 API 凭据（Account ID、Access Key ID、Secret Access Key）"
+
+  social-media-archiver:
+    skills: [social-media-archiver]
+    version: "0.1.0"
+    description: "Collect public X/Twitter threads and Xiaohongshu posts, then generate structured blog essays from archived content."
+    category: Content
+    tags: [twitter, x, xiaohongshu, archive, blog, essay, social-media, skill]
+    hub:
+      hubDesc: "社媒公域内容归档工具。收集 X/Twitter 推文串和小红书笔记，整理为结构化的博客随笔。只使用公开 HTTP 内容，不依赖登录态。"
+      shortLabel: "Social media archiver"
+      status: stable
+      useCases:
+        - "归档 X/Twitter 推文串为博客随笔"
+        - "归档小红书笔记为 Markdown"
+        - "把社交媒体内容整理为结构化文章"
+      warnings:
+        - "只处理公开 HTTP 页面暴露的数据；不依赖登录态或本地浏览器"

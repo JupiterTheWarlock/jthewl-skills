@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "r2-manage-skill",
+  "description": "Manage Cloudflare R2 storage files: upload, list, inspect metadata, rename/move. Requires R2 API credentials.",
+  "version": "0.1.0",
+  "author": {
+    "name": "JupiterTheWarlock",
+    "url": "https://github.com/JupiterTheWarlock"
+  },
+  "homepage": "https://github.com/JupiterTheWarlock/jthewl-skills",
+  "repository": "https://github.com/JupiterTheWarlock/jthewl-skills",
+  "license": "MIT",
+  "keywords": [
+    "r2",
+    "cloudflare",
+    "image-hosting",
+    "upload",
+    "storage",
+    "skill"
+  ]
+}

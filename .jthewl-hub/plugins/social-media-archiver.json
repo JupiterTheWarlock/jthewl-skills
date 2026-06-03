@@ -1,0 +1,38 @@
+{
+  "$schema": "../plugin.schema.json",
+  "name": "social-media-archiver",
+  "hubDesc": "社媒公域内容归档工具。收集 X/Twitter 推文串和小红书笔记，整理为结构化的博客随笔。只使用公开 HTTP 内容，不依赖登录态。",
+  "shortLabel": "Social media archiver",
+  "status": "stable",
+  "updatedAt": "2026-06-03",
+  "maintainer": {
+    "name": "JupiterTheWarlock",
+    "url": "https://github.com/JupiterTheWarlock"
+  },
+  "originalAuthor": {
+    "name": "JupiterTheWarlock",
+    "url": "https://github.com/JupiterTheWarlock"
+  },
+  "provenance": {
+    "type": "original",
+    "sourceName": "",
+    "sourceUrl": "",
+    "license": "MIT",
+    "notes": ""
+  },
+  "links": [
+    {
+      "label": "Repository",
+      "url": "https://github.com/JupiterTheWarlock/jthewl-skills"
+    }
+  ],
+  "useCases": [
+    "归档 X/Twitter 推文串为博客随笔",
+    "归档小红书笔记为 Markdown",
+    "把社交媒体内容整理为结构化文章"
+  ],
+  "warnings": [
+    "只处理公开 HTTP 页面暴露的数据；不依赖登录态或本地浏览器"
+  ],
+  "screenshots": []
+}
