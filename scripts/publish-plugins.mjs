@@ -9,6 +9,7 @@
  *   --dry-run           只打印将要执行的操作，不写入文件
  *   --bump <level>      升版本 (patch | minor | major)，同时更新 registry YAML
  *   --no-hub            跳过生成 .jthewl-hub 元数据
+ *   --hub               强制生成 hub 元数据（覆盖 registry 中的 hubEnabled: false）
  *   --source-root <dir> 覆盖自动检测的 .agents/skills/ 所在根目录
  */
 
@@ -19,12 +20,13 @@ import { parse as parseYaml, stringify as stringifyYaml } from 'yaml'
 // ─── CLI 解析 ────────────────────────────────────────────────────────
 
 function parseArgs(argv) {
-  const args = { plugins: [], dryRun: false, bump: null, noHub: false, sourceRoot: null }
+  const args = { plugins: [], dryRun: false, bump: null, noHub: false, forceHub: false, sourceRoot: null }
   for (let i = 2; i < argv.length; i++) {
     const arg = argv[i]
     if (arg === '--dry-run') args.dryRun = true
     else if (arg === '--bump' && argv[i + 1]) args.bump = argv[++i]
     else if (arg === '--no-hub') args.noHub = true
+    else if (arg === '--hub') args.forceHub = true
     else if (arg === '--source-root' && argv[i + 1]) args.sourceRoot = argv[++i]
     else if (!arg.startsWith('-')) args.plugins.push(arg)
   }
@@ -155,6 +157,9 @@ function main() {
   const registry = parseYaml(readFileSync(registryPath, 'utf-8'))
   const { marketplace, defaults, plugins } = registry
 
+  // 读取 hubEnabled 配置（默认 true 以兼容无此字段的旧 registry）
+  const hubDefault = marketplace.hubEnabled !== false
+
   // 2. 选择 plugin
   const pluginNames = args.plugins.length > 0 ? args.plugins : Object.keys(plugins)
   for (const name of pluginNames) {
@@ -264,8 +269,9 @@ function main() {
     marketplaceJson.plugins.sort((a, b) => a.name.localeCompare(b.name))
     writeJson(marketplaceJsonPath, marketplaceJson, args.dryRun)
 
-    // 2g. 生成 hub 元数据
-    if (!args.noHub && entry.hub) {
+    // 2g. 生成 hub 元数据（受 hubEnabled 配置控制）
+    const shouldGenerateHub = !args.noHub && (args.forceHub || hubDefault) && entry.hub
+    if (shouldGenerateHub) {
       const hubPath = join(marketplaceRoot, '.jthewl-hub', 'plugins', `${pluginName}.json`)
       const hub = entry.hub
 

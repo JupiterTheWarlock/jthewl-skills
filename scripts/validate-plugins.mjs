@@ -50,6 +50,9 @@ function main() {
   const pluginNames = Object.keys(registry.plugins)
   pass(`注册 ${pluginNames.length} 个 plugin`)
 
+  // 读取 hubEnabled 配置
+  const hubEnabled = registry.marketplace.hubEnabled !== false
+
   // 检测源目录
   const sourceRoot = resolve(marketplaceRoot, '..')
   const skillsDir = join(sourceRoot, '.agents', 'skills')
@@ -95,14 +98,20 @@ function main() {
       pass(`源 skill: ${skillName}`)
     }
 
-    // hub 元数据
+    // hub 元数据校验（受 hubEnabled 控制）
     if (entry.hub) {
-      if (!entry.hub.hubDesc) fail('hub 缺少 hubDesc')
-      if (!entry.hub.shortLabel) fail('hub 缺少 shortLabel')
-      if (!entry.hub.status) fail('hub 缺少 status')
-      else if (!VALID_STATUSES.has(entry.hub.status)) fail(`hub.status "${entry.hub.status}" 不合法`)
-      else pass('hub 元数据完整')
-    } else {
+      if (!hubEnabled) {
+        // registry 中有 hub 数据但 marketplace 禁用了生成 — 仅提示
+        pass(`${pluginName}: hub 数据存在（生成已由 marketplace.hubEnabled: false 禁用）`)
+      } else {
+        // 正常校验 hub 字段完整性
+        if (!entry.hub.hubDesc) fail('hub 缺少 hubDesc')
+        if (!entry.hub.shortLabel) fail('hub 缺少 shortLabel')
+        if (!entry.hub.status) fail('hub 缺少 status')
+        else if (!VALID_STATUSES.has(entry.hub.status)) fail(`hub.status "${entry.hub.status}" 不合法`)
+        else pass('hub 元数据完整')
+      }
+    } else if (hubEnabled) {
       warn('无 hub 元数据')
     }
   }
@@ -148,9 +157,15 @@ function main() {
     pass(`${pluginName}: plugin.json 存在且一致`)
   }
 
-  // hub metadata
+  // hub metadata（受 hubEnabled 控制）
   for (const pluginName of pluginNames) {
     const hubPath = join(marketplaceRoot, '.jthewl-hub', 'plugins', `${pluginName}.json`)
+    if (!hubEnabled) {
+      // hub 已禁用 — 检查是否有孤立的 hub 文件
+      if (existsSync(hubPath)) warn(`${pluginName}: 孤立 hub metadata（marketplace.hubEnabled: false）`)
+      continue
+    }
+    // hub 已启用 — 正常校验
     if (!existsSync(hubPath)) { warn(`${pluginName}: hub metadata 不存在`); continue }
     const hub = JSON.parse(readFileSync(hubPath, 'utf-8'))
     if (hub.name !== pluginName) fail(`${pluginName}: hub name "${hub.name}" 不匹配`)
