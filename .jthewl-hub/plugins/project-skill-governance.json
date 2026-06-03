@@ -4,7 +4,7 @@
   "hubDesc": "用于治理项目内多套 agent skill 目录的迁移工具。它把 .agents/skills 作为 canonical source，同时把 .claude、.cursor、.codex 等目录改造成兼容入口。",
   "shortLabel": "Skill governance",
   "status": "stable",
-  "updatedAt": "2026-05-25",
+  "updatedAt": "2026-06-03",
   "maintainer": {
     "name": "JupiterTheWarlock",
     "url": "https://github.com/JupiterTheWarlock"

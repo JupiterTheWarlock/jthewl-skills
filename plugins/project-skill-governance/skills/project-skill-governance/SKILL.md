@@ -61,7 +61,7 @@ Do not maintain substantive workflow instructions in `.claude/skills`, `.cursor/
 After applying changes, run:
 
 ```powershell
-python <path-to-skill-creator>/scripts/quick_validate.py .agents\skills\project-skill-governance
+python C:\Users\Administrator\.codex\skills\.system\skill-creator\scripts\quick_validate.py .agents\skills\project-skill-governance
 ```
 
 If broad validation is needed, run the same validator against each folder under `.agents/skills`.

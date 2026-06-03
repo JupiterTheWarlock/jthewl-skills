@@ -1,0 +1,12 @@
+{
+  "name": "jthewl-skills",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "publish": "node scripts/publish-plugins.mjs",
+    "validate": "node scripts/validate-plugins.mjs"
+  },
+  "dependencies": {
+    "yaml": "^2.7"
+  }
+}

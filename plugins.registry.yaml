@@ -1,0 +1,85 @@
+# jthewl-skills 插件注册表
+# 单一事实来源：所有 plugin 元数据在此声明，由 scripts/publish-plugins.mjs 生成产物。
+#
+# 用法：
+#   npm run publish              重建所有 plugin
+#   npm run publish git-sync     重建指定 plugin
+#   npm run publish -- --bump patch git-sync  升版本并重建
+
+marketplace:
+  name: jthewl-skills
+  description: "JupiterTheWarlock's public Claude Code skill plugins."
+  version: "0.1.0"
+  owner:
+    name: JupiterTheWarlock
+  homepage: "https://github.com/JupiterTheWarlock/jthewl-skills"
+  repository: "https://github.com/JupiterTheWarlock/jthewl-skills"
+
+defaults:
+  author:
+    name: JupiterTheWarlock
+    url: "https://github.com/JupiterTheWarlock"
+  license: MIT
+  homepage: "https://github.com/JupiterTheWarlock/jthewl-skills"
+  repository: "https://github.com/JupiterTheWarlock/jthewl-skills"
+  provenance:
+    type: original
+    sourceName: ""
+    sourceUrl: ""
+    license: MIT
+    notes: ""
+  links:
+    - label: Repository
+      url: "https://github.com/JupiterTheWarlock/jthewl-skills"
+
+plugins:
+  git-sync:
+    skills: [git-sync]
+    version: "0.1.0"
+    description: "Generic multi-repository Git synchronization workflow for main repos, submodules, and nested Git repos."
+    category: Development
+    tags: [git, sync, submodules, repository, workflow, skill]
+    hub:
+      hubDesc: "面向 meta-repo 的多仓库同步治理工具。它会把主仓库、git submodules、根目录独立 Git 仓库分层处理，适合一个 workspace 里混合管理多个项目的场景。"
+      shortLabel: "Multi-repo sync"
+      status: stable
+      useCases:
+        - "同步主仓库、submodules 和根目录独立 Git 仓库"
+        - "为每个仓库保留独立 commit message"
+        - "避免在 meta-repo 根目录误用无差别 git add"
+      warnings:
+        - "执行 live sync 前应确认当前工作区没有不想提交或推送的本地改动"
+
+  project-skill-governance:
+    skills: [project-skill-governance]
+    version: "0.1.0"
+    description: "Consolidate repo-local agent skills into .agents/skills and maintain compatibility router skills across agent ecosystems."
+    category: Development
+    tags: [skills, agents, governance, migration, codex, claude-code]
+    hub:
+      hubDesc: "用于治理项目内多套 agent skill 目录的迁移工具。它把 .agents/skills 作为 canonical source，同时把 .claude、.cursor、.codex 等目录改造成兼容入口。"
+      shortLabel: "Skill governance"
+      status: stable
+      useCases:
+        - "合并项目内重复或分散的 agent skills"
+        - "维护 .agents/skills canonical source"
+        - "为不同 agent 生态生成兼容 router skill"
+      warnings:
+        - "运行前应检查项目里是否存在同名但内容不同的 skill，冲突需要人工判断"
+
+  xhs-note-scraper:
+    skills: [xhs-note-scraper]
+    version: "0.1.0"
+    description: "Export public Xiaohongshu/XHS note pages to Markdown, JSON, raw HTML, and downloaded images using public HTTP fetches."
+    category: Content
+    tags: [xhs, xiaohongshu, scraper, archive, markdown, skill]
+    hub:
+      hubDesc: "用于把公开小红书笔记导出为 Markdown、JSON、原始 HTML 和图片素材的归档工具。设计重点是只使用公开 HTTP 内容，不依赖登录态或本地浏览器。"
+      shortLabel: "XHS note export"
+      status: stable
+      useCases:
+        - "归档公开小红书笔记"
+        - "导出 Markdown 和结构化 JSON"
+        - "下载公开页面暴露的图片素材"
+      warnings:
+        - "只处理公开 HTTP 页面暴露的数据；如果页面不暴露 SSR 数据或图片 URL，应报告限制并停止"

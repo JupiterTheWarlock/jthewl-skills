@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Skill Governance"
+  short_description: "Consolidate repo-local skills into .agents/skills and route agent-specific copies."
+  default_prompt: "$project-skill-governance"

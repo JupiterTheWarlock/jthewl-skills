@@ -4,10 +4,18 @@
   "description": "Consolidate repo-local agent skills into .agents/skills and maintain compatibility router skills across agent ecosystems.",
   "version": "0.1.0",
   "author": {
-    "name": "JupiterTheWarlock"
+    "name": "JupiterTheWarlock",
+    "url": "https://github.com/JupiterTheWarlock"
   },
   "homepage": "https://github.com/JupiterTheWarlock/jthewl-skills",
   "repository": "https://github.com/JupiterTheWarlock/jthewl-skills",
   "license": "MIT",
-  "keywords": ["skills", "agents", "governance", "migration", "codex", "claude-code"]
+  "keywords": [
+    "skills",
+    "agents",
+    "governance",
+    "migration",
+    "codex",
+    "claude-code"
+  ]
 }

@@ -19,7 +19,14 @@
       "repository": "https://github.com/JupiterTheWarlock/jthewl-skills",
       "license": "MIT",
       "category": "Development",
-      "tags": ["git", "sync", "submodules", "repository", "workflow", "skill"]
+      "tags": [
+        "git",
+        "sync",
+        "submodules",
+        "repository",
+        "workflow",
+        "skill"
+      ]
     },
     {
       "name": "project-skill-governance",
@@ -33,7 +40,14 @@
       "repository": "https://github.com/JupiterTheWarlock/jthewl-skills",
       "license": "MIT",
       "category": "Development",
-      "tags": ["skills", "agents", "governance", "migration", "codex", "claude-code"]
+      "tags": [
+        "skills",
+        "agents",
+        "governance",
+        "migration",
+        "codex",
+        "claude-code"
+      ]
     },
     {
       "name": "xhs-note-scraper",
@@ -47,7 +61,14 @@
       "repository": "https://github.com/JupiterTheWarlock/jthewl-skills",
       "license": "MIT",
       "category": "Content",
-      "tags": ["xhs", "xiaohongshu", "scraper", "archive", "markdown", "skill"]
+      "tags": [
+        "xhs",
+        "xiaohongshu",
+        "scraper",
+        "archive",
+        "markdown",
+        "skill"
+      ]
     }
   ]
 }

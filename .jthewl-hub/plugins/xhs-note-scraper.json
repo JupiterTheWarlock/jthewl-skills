@@ -4,7 +4,7 @@
   "hubDesc": "用于把公开小红书笔记导出为 Markdown、JSON、原始 HTML 和图片素材的归档工具。设计重点是只使用公开 HTTP 内容，不依赖登录态或本地浏览器。",
   "shortLabel": "XHS note export",
   "status": "stable",
-  "updatedAt": "2026-05-25",
+  "updatedAt": "2026-06-03",
   "maintainer": {
     "name": "JupiterTheWarlock",
     "url": "https://github.com/JupiterTheWarlock"
