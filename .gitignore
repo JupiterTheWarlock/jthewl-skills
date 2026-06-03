@@ -1,0 +1,20 @@
+node_modules
+package-lock.json
+
+# Vite / build
+dist
+*.local
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.sw?
