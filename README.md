@@ -2,12 +2,12 @@
 
 JupiterTheWarlock's public Claude Code skill marketplace.
 
-Browse and install plugins directly from this repository. The separate web hub is being retired; marketplace installation remains available.
+Browse and install plugins directly from this repository. The separate web hub was paused on 2026-09-21; marketplace installation remains available.
 
 Related repositories:
 
 - [jthewl-skills](https://github.com/JupiterTheWarlock/jthewl-skills) — this Claude Code skills marketplace.
-- [jthewl-skills-hub](https://github.com/JupiterTheWarlock/jthewl-skills-hub) — source for the web UI being retired.
+- [jthewl-skills-hub](https://github.com/JupiterTheWarlock/jthewl-skills-hub) — retained source for the paused web UI.
 
 ## Marketplace
 
