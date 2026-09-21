@@ -2,12 +2,12 @@
 
 JupiterTheWarlock's public Claude Code skill marketplace.
 
-Browse the marketplace on the public hub: [skills.jthewl.cc](https://skills.jthewl.cc)
+Browse and install plugins directly from this repository. The separate web hub is being retired; marketplace installation remains available.
 
 Related repositories:
 
 - [jthewl-skills](https://github.com/JupiterTheWarlock/jthewl-skills) — this Claude Code skills marketplace.
-- [jthewl-skills-hub](https://github.com/JupiterTheWarlock/jthewl-skills-hub) — the public web UI for browsing and previewing plugins.
+- [jthewl-skills-hub](https://github.com/JupiterTheWarlock/jthewl-skills-hub) — source for the web UI being retired.
 
 ## Marketplace
 
@@ -47,7 +47,7 @@ One marketplace can list many plugins. Each plugin can contain one or more skill
 
 ## Hub Metadata
 
-The public web hub reads extra display metadata from `.jthewl-hub/plugins/<plugin-name>.json`.
+The former web hub uses extra display metadata from `.jthewl-hub/plugins/<plugin-name>.json`. It is retained as source data and does not trigger website deployments.
 This data is intentionally separate from Claude Code plugin manifests:
 
 - `.claude-plugin/marketplace.json` and `plugins/*/.claude-plugin/plugin.json` stay focused on Claude Code installation and validation.
@@ -80,14 +80,6 @@ Use local-only private terms for personal codenames, handles, or domains:
 SKILL_SAFETY_PRIVATE_TERMS="private-term-1,private-term-2" node .agents/skills/skill-safety-audit/scripts/audit-skill-safety.mjs "<skill-dir>"
 ```
 
-## Auto Refresh Hub
+## Web Hub Retirement
 
-Push to `main` in this repository now triggers `.github/workflows/trigger-skills-hub-deploy.yml`, which calls a Vercel Deploy Hook for `jthewl-skills-hub`.
-
-Required setup (once):
-
-1. In Vercel `jthewl-skills-hub` project settings, create a Deploy Hook for `main`.
-2. In this repository settings, add GitHub Actions secret `SKILLS_HUB_DEPLOY_HOOK`.
-3. Set the secret value to that Deploy Hook URL.
-
-After setup, changes to `.claude-plugin/**`, `.jthewl-hub/**`, or `plugins/**` will auto-trigger hub redeploy after each push.
+The workflow that triggered Vercel deployments of `jthewl-skills-hub` has been removed. Updates to this marketplace no longer redeploy the web hub. Plugin installation and updates continue through GitHub.
